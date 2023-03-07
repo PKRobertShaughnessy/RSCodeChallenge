@@ -24,7 +24,8 @@ data class CurrentWeatherViewData(
 
 class CurrentWeatherMapper @Inject constructor() : DataModelMapper<CurrentWeather, CurrentWeatherViewData> {
     override fun mapToModel(viewData: CurrentWeatherViewData): CurrentWeather {
-        TODO("Not yet implemented")
+        println("in mapToModel")
+        TODO("Not yet implemented ")
     }
 
     override fun mapToViewData(model: CurrentWeather): CurrentWeatherViewData {

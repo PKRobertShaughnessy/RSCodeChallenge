@@ -13,6 +13,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalFocusManager
 import com.google.accompanist.navigation.animation.AnimatedNavHost
 import com.google.accompanist.systemuicontroller.rememberSystemUiController
+import com.gozio.weather.weapose.network.RetrofitInstance
+import com.gozio.weather.weapose.network.WeatherAPI
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalAnimationApi::class)
@@ -20,7 +22,7 @@ import com.google.accompanist.systemuicontroller.rememberSystemUiController
 fun WeatherApp(appState: WeatherAppState = rememberWeatherAppState()) {
     val systemUiController = rememberSystemUiController()
     val darkIcons = isSystemInDarkTheme()
-
+    
     SideEffect {
         if (!appState.isCustomDarkMode) {
             systemUiController.setSystemBarsColor(color = Color.Transparent, darkIcons = !darkIcons)

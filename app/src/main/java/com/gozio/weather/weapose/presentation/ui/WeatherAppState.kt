@@ -73,10 +73,12 @@ fun NavGraphBuilder.home(appState: WeatherAppState) {
                 slideOutOfContainer(AnimatedContentScope.SlideDirection.Right, animationSpec = tween(700))
             },
         ) {
+
             CurrentWeather(
                 appState = appState
             )
         }
+
     }
 }
 

@@ -15,6 +15,7 @@ enum class WeatherType(val weather: String) {
 }
 
 fun String.toIcon(): Int = when {
+
     contains(WeatherType.FEW_CLOUDS.weather) -> {
         R.drawable.ic_few_clouds
     }
